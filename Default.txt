@@ -1,0 +1,128 @@
+##########################################################################
+#
+# Ashita Default Script
+#
+# Comments start with '#'.
+# All commands start with '/'
+#
+##########################################################################
+/load XIPivot
+/wait 4
+
+##########################################################################
+# Load Common Plugins
+##########################################################################
+
+/load WindowerInput
+/load Addons
+/load Screenshot
+/load Minimap
+/load Ashitacast
+# /load Deeps
+/load Duration
+/load shorthand
+/load statustimers
+# /load watchexp
+/load DressMe
+/load zonetimer
+/load rolldisplay
+# /load GearLock
+/load focuser
+
+
+
+##########################################################################
+# Load Common Addons
+##########################################################################
+
+/addon load distance
+/addon load drawdistance
+/addon load fps
+/addon load timestamp
+/addon load tparty
+/addon load hideconsole
+/hideconsole hide
+/addon load renamer
+/renamer load eden
+/addon load allmaps
+/addon load chatmon
+/addon load checker
+/addon load craftmon
+/addon load filterless
+/addon load filters
+/addon load find
+/addon load findall
+/addon load ibar-mod
+/addon load instantah
+#/addon load macrofix
+# /addon load mapdot
+/addon load recast
+# /addon load status this is the redundant list of pt status's
+/addon load links
+/addon load logs
+/addon load cfhblock
+/addon load debuff
+/addon load clock
+/addon load debuffed
+/addon load battlemod  | Issues - but just needs to be reloaded
+/addon load partybuffs
+/addon load petinfo
+
+/addon load skillchains  | Issues - but just needs to be reloaded
+/addon load blusets
+/addon load invomon
+/addon load expmon
+/addon load itemwatch
+/addon load scoreboard
+/addon load rolltracker
+/addon load meteorologist
+
+##########################################################################
+# Set Common Settings
+##########################################################################
+
+/ambient 123 123 123 123 
+/fps .1
+/filters load main
+/drawdistance setmob 50
+/drawdistance setworld 13
+/equipviewer pos 1910 1200
+/shh packetws off
+/sb visible
+# /blockmouse
+
+##########################################################################
+# Set Common Keybinds
+##########################################################################
+
+
+
+
+/wait 35
+/addon load equipviewer
+/autotarget off
+/bind SYSRQ /screenshot hide
+/bind ^v /paste
+/bind F11 /ambient
+/bind +F11 /ambient 5 5 5 5 
+/bind !F11 /ambient 255 255 255 255
+/bind ^F11 /ambient 123 123 123 123
+/bind F12 /fps show
+/bind ^F1 /input /ta <a10>
+/bind ^F2 /input /ta <a11>
+/bind ^F3 /input /ta <a12>
+/bind ^F4 /input /ta <a13>
+/bind ^F5 /input /ta <a14>
+/bind ^F6 /input /ta <a15>
+/bind !F1 /input /ta <a20>
+/bind !F2 /input /ta <a21>
+/bind !F3 /input /ta <a22>
+/bind !F4 /input /ta <a23>
+/bind !F5 /input /ta <a24>
+/bind !F6 /input /ta <a25>
+/alias /fixsc /addon reload skillchains
+/alias /fixbm /addon reload battlemod
+#/bind ^prior /fixbm
+#/bind ^next /fixsc
+/bind ^next /exec reload-sc-bm.txt
+/bind !next /addon reload partybuffs
